@@ -4,7 +4,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 GOOGLE_PREDICTION_PRIVATE_KEY = os.path.join(BASE_DIR, 'private-key.p12')
-GOOGLE_PREDICTION_PROJECT_EMAIL = '____________'
+GOOGLE_PREDICTION_PROJECT_EMAIL = '_____'
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
