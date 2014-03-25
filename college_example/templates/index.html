@@ -1,0 +1,15 @@
+<h1>Will you get into Stanford?</h1>
+
+{% if result %}
+<h3>Result: {{result}}</h3>
+{% endif %}
+
+<p>Fill in your SAT score (out of 2400), your GPA (out of 4.0), and rate your extracurriculars, recommendations and essays (in a 1-5 scale).</p>
+
+<form action="/" method="post">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Submit" />
+</form>
+
+<small>Disclaimer: This application uses fake data and is not a good measure of whether or not you'll get into Stanford.<small>

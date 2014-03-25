@@ -1,5 +1,11 @@
 # Django settings for college_example project.
 
+import os
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+
+GOOGLE_PREDICTION_PRIVATE_KEY = os.path.join(BASE_DIR, 'private-key.p12')
+GOOGLE_PREDICTION_PROJECT_EMAIL = '____________'
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -108,6 +114,7 @@ ROOT_URLCONF = 'college_example.urls'
 WSGI_APPLICATION = 'college_example.wsgi.application'
 
 TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, 'college_example/templates/'),
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
